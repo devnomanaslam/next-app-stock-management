@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 //GET Products 
 export async function GET(request) {
-    const uri = "mongodb://127.0.0.1:27017";
+    const uri = "mongodb+srv://devnomanaslam:4aSRnWz2JwXSmiQ@nomanprogects.cshfktv.mongodb.net/";
     const client = new MongoClient(uri);
 
     try {
@@ -21,7 +21,7 @@ export async function GET(request) {
 export async function POST(request) {
     let { slug, quantity, price } = await request.json();
     console.log(slug, quantity, price)
-    const uri = "mongodb://127.0.0.1:27017";
+    const uri = "mongodb+srv://devnomanaslam:4aSRnWz2JwXSmiQ@nomanprogects.cshfktv.mongodb.net/";
     const client = new MongoClient(uri);
     try {
         const database = client.db('stock');
