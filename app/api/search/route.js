@@ -8,7 +8,7 @@ export async function GET(request) {
     // const query = request.nextUrl.searchParams.get("query");
     const query = new URL(request.nextUrl.href).searchParams.get("query");
 
-    const uri = "mongodb://127.0.0.1:27017";
+    const uri = "mongodb+srv://devnomanaslam:4aSRnWz2JwXSmiQ@nomanprogects.cshfktv.mongodb.net/";
     const client = new MongoClient(uri);
     try {
         const database = client.db('stock');
